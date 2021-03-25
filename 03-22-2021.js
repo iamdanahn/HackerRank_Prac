@@ -27,6 +27,24 @@ function deviceNamesSystem(devicenames) {
 	}
 	return newNames;
 }
+
+// RUBY ATTEMPT
+// def deviceNamesSystem(devicenames)
+//     hash = {}
+    
+//     return devicenames.map do |device|
+//         if hash[device]
+//             hash[device] += 1
+//             device + hash[device].to_s
+//         else
+//             hash[device] = 0
+//             device
+//         end
+//     end
+    
+// end
+
+
 // sample
 // devices = ["switch", "tv", "switch", "tv", "switch", "tv"];
 // turns into
