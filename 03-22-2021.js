@@ -27,7 +27,10 @@ function deviceNamesSystem(devicenames) {
 	}
 	return newNames;
 }
-
+// sample
+// devices = ["switch", "tv", "switch", "tv", "switch", "tv"];
+// turns into
+// devices = ["switch", "tv", "switch1", "tv1", "switch2", "tv2"];
 
 
 
@@ -57,4 +60,29 @@ function mergeInBetween(list1, list2, a, b) {
     
     return list1.slice(0, a) + list2 + list1.slice(b, list1.length)
 
+}
+
+
+
+
+/*
+ * Complete the 'countTeams' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY skills
+ *  2. INTEGER minPlayers
+ *  3. INTEGER minLevel
+ *  4. INTEGER maxLevel
+ */
+
+function countTeams(skills, minPlayers, minLevel, maxLevel) {
+    // Write your code here
+    
+    const availablePlayers = skills.filter(skill => (skill >= minLevel && skill <= maxLevel));
+    if (availablePlayers.length < minPlayers) return 0;
+    if (availablePlayers.length === minPlayers) return 1;
+    
+    
+    
 }
