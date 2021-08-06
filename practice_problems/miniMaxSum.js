@@ -27,3 +27,18 @@
 // Sum everything except , the sum is .
 // Sum everything except , the sum is .
 // Hints: Beware of integer overflow! Use 64-bit Integer.
+
+function miniMaxSum(arr) {
+  // Write your code here
+  arr.sort((a, b) => a - b);
+
+  let minSum = 0;
+  let maxSum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i <= 3) minSum += arr[i];
+    if (i >= 1) maxSum += arr[i];
+  }
+
+  console.log(`${minSum} ${maxSum}`);
+}
