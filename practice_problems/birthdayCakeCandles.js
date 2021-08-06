@@ -21,3 +21,15 @@
 // 2
 // Explanation 0
 // Candle heights are . The tallest candles are  units, and there are  of them.
+
+function birthdayCakeCandles(candles) {
+    // Write your code here
+    const tallest = Math.max(...candles);
+    let tallestCount = 0;
+    
+    candles.forEach(candle => {
+        if (candle === tallest) tallestCount++;
+    })
+    
+    return tallestCount;
+}
